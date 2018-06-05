@@ -38,6 +38,7 @@ public interface JobStatisticsAPI {
     /**
      * 获取用户作业总数.
      *
+     * @param userName 用户名
      * @return 作业总数.
      */
     int getJobsTotalCount(String userName);
@@ -52,6 +53,7 @@ public interface JobStatisticsAPI {
     /**
      * 获取指定用户所有作业简明信息.
      *
+     * @param userName 用户名
      * @return 作业简明信息集合.
      */
     Collection<JobBriefInfo> getAllJobsBriefInfo(String userName);
@@ -68,9 +70,10 @@ public interface JobStatisticsAPI {
      * 根据用户获取作业简明信息.
      *
      * @param jobName 作业名称
+     * @param userName 用户名
      * @return 作业简明信息.
      */
-    JobBriefInfo getJobBriefInfo(String jobName, String username);
+    JobBriefInfo getJobBriefInfo(String jobName, String userName);
     
     /**
      * 获取该IP下所有作业简明信息.
@@ -84,7 +87,8 @@ public interface JobStatisticsAPI {
      * 获取该IP下所有作业简明信息.
      *
      * @param ip 服务器IP
+     * @param userName 用户名
      * @return 作业简明信息集合.
      */
-    Collection<JobBriefInfo> getJobsBriefInfo(String ip, String username);
+    Collection<JobBriefInfo> getJobsBriefInfo(String ip, String userName);
 }

@@ -27,7 +27,7 @@ import java.util.Collection;
  * @author caohao
  */
 public interface ServerStatisticsAPI {
-    
+
     /**
      * 获取作业服务器总数.
      *
@@ -38,10 +38,11 @@ public interface ServerStatisticsAPI {
     /**
      * 获取用户作业服务器总数.
      *
+     * @param userName 用户名
      * @return 作业服务器总数
      */
     int getServersTotalCount(String userName);
-    
+
     /**
      * 获取所有作业服务器简明信息.
      *
@@ -52,6 +53,7 @@ public interface ServerStatisticsAPI {
     /**
      * 获取指定用户所有作业服务器简明信息.
      *
+     * @param userName 用户名
      * @return 作业服务器简明信息集合
      */
     Collection<ServerBriefInfo> getAllServersBriefInfo(String userName);

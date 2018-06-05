@@ -23,20 +23,21 @@ package com.dangdang.ddframe.job.lite.lifecycle.api;
  * @author caohao
  */
 public interface ShardingOperateAPI {
-    
+
     /**
      * 禁用作业分片.
-     * 
+     *
      * @param jobName 作业名称
-     * @param item 分片项
+     * @param item    分片项
      */
     void disable(String jobName, String item);
 
     /**
      * 禁用作业分片.
      *
-     * @param jobName 作业名称
-     * @param item 分片项
+     * @param jobName  作业名称
+     * @param item     分片项
+     * @param userName 用户名
      */
     void disable(String jobName, String item, String userName);
 
@@ -44,15 +45,16 @@ public interface ShardingOperateAPI {
      * 启用作业分片.
      *
      * @param jobName 作业名称
-     * @param item 分片项
+     * @param item    分片项
      */
     void enable(String jobName, String item);
 
     /**
      * 启用作业分片.
      *
-     * @param jobName 作业名称
-     * @param item 分片项
+     * @param jobName  作业名称
+     * @param userName 用户名
+     * @param item     分片项
      */
     void enable(String jobName, String item, String userName);
 }

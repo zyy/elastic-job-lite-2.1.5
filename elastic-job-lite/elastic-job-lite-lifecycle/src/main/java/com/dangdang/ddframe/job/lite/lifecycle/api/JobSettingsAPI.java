@@ -25,7 +25,7 @@ import com.dangdang.ddframe.job.lite.lifecycle.domain.JobSettings;
  * @author zhangliang
  */
 public interface JobSettingsAPI {
-    
+
     /**
      * 获取作业设置.
      *
@@ -37,11 +37,12 @@ public interface JobSettingsAPI {
     /**
      * 获取用户作业设置.
      *
-     * @param jobName 作业名称
+     * @param jobName  作业名称
+     * @param userName 用户名
      * @return 作业设置对象
      */
     JobSettings getJobSettings(String jobName, String userName);
-    
+
     /**
      * 更新作业设置.
      *
@@ -53,19 +54,22 @@ public interface JobSettingsAPI {
      * 更新制定用户作业设置.
      *
      * @param jobSettings 作业设置对象
+     * @param userName    用户名
      */
     void updateJobSettings(JobSettings jobSettings, String userName);
-    
+
     /**
      * 删除作业设置.
      *
      * @param jobName 作业名称
      */
     void removeJobSettings(final String jobName);
+
     /**
      * 删除作业设置.
      *
-     * @param jobName 作业名称
+     * @param userName 用户名
+     * @param jobName  作业名称
      */
     void removeJobSettings(final String jobName, String userName);
 }

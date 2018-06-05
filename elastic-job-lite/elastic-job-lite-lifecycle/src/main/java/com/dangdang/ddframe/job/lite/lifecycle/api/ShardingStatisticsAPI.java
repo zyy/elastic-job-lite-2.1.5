@@ -27,7 +27,7 @@ import java.util.Collection;
  * @author caohao
  */
 public interface ShardingStatisticsAPI {
-    
+
     /**
      * 获取作业分片信息集合.
      *
@@ -39,7 +39,8 @@ public interface ShardingStatisticsAPI {
     /**
      * 根据用户获取作业分片信息集合.
      *
-     * @param jobName 作业名称
+     * @param jobName  作业名称
+     * @param userName 用户名
      * @return 作业分片信息集合
      */
     Collection<ShardingInfo> getShardingInfoByUserName(String jobName, String userName);
